@@ -1,1 +1,44 @@
-hello world
+
+<!DOCTYPE html>
+<html>
+   <body>
+      <h1>WebView Navigation Test</h1>
+      <p> Generate a GET request
+         <br>
+         <a href="/get.html">Get Request</a>
+         <br>
+         <br>
+      <p> Generate a GET request to be blocked
+         <br>
+         <a href="/block.html">Get Block</a>
+         <br>
+         <br>
+      <p> Generate a POST request
+      <form action="/post.html" method="post" target="_blank">
+         <input type="submit" value="Post Request" />
+      </form>
+      <br>
+      <br>
+      <p> Generate a request for invoking an intent
+         <br>
+         <a href="tel://12345">Intent Invocation</a>
+         <br>
+         <br>
+      <p>
+         Redirect test
+         <br>
+         <a href="/redirect_1.html">href redirect</a>
+         <br>
+         <br>
+         <button onclick="myFunction()">window.location redirect</button>
+         <script>
+            function myFunction() {
+                location.replace("/redirect_1.html")
+            }
+         </script>
+         <br>
+      <p> First three schemes in iframe can skip shouldOverrideUrlLoading:
+         <br>
+         <iframe src="navigation_iframe.htm"></iframe>
+   </body>
+</html>
